@@ -1,6 +1,6 @@
 # Student Management API
 
-A RESTful API for student management built with Express.js and Sequelize ORM following the MVC pattern.
+A RESTful API for student management built with Express.js, Sequelize ORM, and documented with Swagger.
 
 ## Features
 
@@ -10,16 +10,17 @@ A RESTful API for student management built with Express.js and Sequelize ORM fol
 - RESTful API endpoints
 - Input validation and error handling
 - Automatic table creation and schema synchronization
+- **Swagger UI documentation**
 
 ## Setup Instructions
 
-1. Clone the repository
-2. Install dependencies:
-   ```
+1. **Clone the repository**
+2. **Install dependencies:**
+   ```bash
    npm install
    ```
-3. Configure the `.env` file with your MySQL database credentials:
-   ```
+3. **Configure the `.env` file** with your MySQL database credentials:
+   ```env
    DB_HOST=localhost
    DB_USER=your_username
    DB_PASSWORD=your_password
@@ -27,20 +28,25 @@ A RESTful API for student management built with Express.js and Sequelize ORM fol
    DB_PORT=3306
    PORT=3000
    ```
-4. Run the application:
-   ```
+4. **Run the application:**
+   ```bash
    npm run dev
+   # o
+   node server.js
    ```
 
 ## API Endpoints
 
+Base URL local: `http://localhost:3000/api/students`
+Base URL producción: `https://apistudents-1pof.onrender.com/api/students`
+
 ### Students
 
-- **GET /api/students** - Get all students
-- **GET /api/students/:id** - Get a specific student
-- **POST /api/students** - Create a new student
-- **PUT /api/students/:id** - Update a student
-- **DELETE /api/students/:id** - Delete a student
+- **GET /** - Get all students
+- **GET /:id** - Get a specific student
+- **POST /** - Create a new student
+- **PUT /:id** - Update a student
+- **DELETE /:id** - Delete a student
 
 ## Student Object Structure
 
@@ -48,13 +54,10 @@ A RESTful API for student management built with Express.js and Sequelize ORM fol
 {
   "id": 1,
   "registration_number": "2023001",
-  "blood_type": "O+",
   "name": "John Doe",
   "email": "john.doe@example.com",
   "age": 20,
-  "grade": "A",
-  "created_at": "2023-08-10T12:00:00Z",
-  "updated_at": "2023-08-10T12:00:00Z"
+  "major": "Ingeniería en Sistemas"
 }
 ```
 
@@ -62,29 +65,92 @@ A RESTful API for student management built with Express.js and Sequelize ORM fol
 
 ### Create a Student
 
-```
+```http
 POST /api/students
 Content-Type: application/json
 
 {
   "registration_number": "2023001",
-  "blood_type": "O+",
   "name": "John Doe",
   "email": "john.doe@example.com",
   "age": 20,
-  "grade": "A"
+  "major": "Ingeniería en Sistemas"
 }
 ```
 
 ### Update a Student
 
-```
+```http
 PUT /api/students/1
 Content-Type: application/json
 
 {
   "name": "John Smith",
-  "grade": "A+",
-  "blood_type": "AB+"
+  "major": "Matemáticas"
 }
-```# ApiStudents
+```
+
+## Ejemplos de uso de la API (con JSON)
+
+### Obtener todos los estudiantes
+
+**GET** `/api/students`
+
+_No requiere body._
+
+---
+
+### Obtener un estudiante por ID
+
+**GET** `/api/students/1`
+
+_No requiere body._
+
+---
+
+### Crear un nuevo estudiante
+
+**POST** `/api/students`
+
+```json
+{
+  "registration_number": "2023001",
+  "name": "Juan Pérez",
+  "email": "juan.perez@example.com",
+  "age": 21,
+  "major": "Ingeniería en Sistemas"
+}
+```
+
+---
+
+### Actualizar un estudiante
+
+**PUT** `/api/students/1`
+
+```json
+{
+  "name": "Juan Actualizado",
+  "major": "Matemáticas"
+}
+```
+
+---
+
+### Eliminar un estudiante
+
+**DELETE** `/api/students/1`
+
+_No requiere body._
+
+---
+
+## Swagger Documentation
+
+Accede a la documentación interactiva de la API en:
+- Local: [http://localhost:3000/api/docs](http://localhost:3000/api/docs)
+- Producción: [https://apistudents-1pof.onrender.com/api/docs](https://apistudents-1pof.onrender.com/api/docs)
+
+---
+
+# ApiStudents

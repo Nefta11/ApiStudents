@@ -12,6 +12,9 @@ const options = {
       {
         url: "http://localhost:3000/api",
       },
+      {
+        url: "https://apistudents-1pof.onrender.com/api",
+      },
     ],
   },
   apis: ["./routes/*.js"], // Documentación en los archivos de rutas
