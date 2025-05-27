@@ -12,9 +12,6 @@ const options = {
       {
         url: 'http://localhost:3000/api',
       },
-      {
-        url: 'https://api-students-snowy.vercel.app/api',
-      },
     ],
   },
   apis: ['./routes/*.js'], // Documentación en los archivos de rutas
