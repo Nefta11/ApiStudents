@@ -45,10 +45,11 @@ Base URL producción: `https://apistudents-1pof.onrender.com/api/students`
 {
   "id": 1,
   "registration_number": "2023001",
+  "blood_type": "O+",
   "name": "John Doe",
   "email": "john.doe@example.com",
   "age": 20,
-  "major": "Ingeniería en Sistemas"
+  "grade": "A"
 }
 ```
 
@@ -106,10 +107,11 @@ _No requiere body._
 ```json
 {
   "registration_number": "2023001",
+  "blood_type": "O+",
   "name": "Juan Pérez",
   "email": "juan.perez@example.com",
   "age": 21,
-  "major": "Ingeniería en Sistemas"
+  "grade": "A"
 }
 ```
 
