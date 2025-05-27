@@ -145,9 +145,27 @@ _No requiere body._
 
 ---
 
+## Ejemplo de JSON para probar la API
+
+Puedes usar este JSON para crear un estudiante con una petición POST a `/api/students`:
+
+```json
+{
+  "registration_number": "2024001",
+  "blood_type": "O+",
+  "name": "Juan Pérez",
+  "email": "juan.perez@example.com",
+  "age": 21,
+  "grade": "A"
+}
+```
+
+---
+
 ## Swagger Documentation
 
 Accede a la documentación interactiva de la API en:
+
 - Local: [http://localhost:3000/api/docs](http://localhost:3000/api/docs)
 - Producción: [https://apistudents-1pof.onrender.com/api/docs](https://apistudents-1pof.onrender.com/api/docs)
 
