@@ -19,16 +19,7 @@ A RESTful API for student management built with Express.js, Sequelize ORM, and d
    ```bash
    npm install
    ```
-3. **Configure the `.env` file** with your MySQL database credentials:
-   ```env
-   DB_HOST=localhost
-   DB_USER=your_username
-   DB_PASSWORD=your_password
-   DB_NAME=student_db
-   DB_PORT=3306
-   PORT=3000
-   ```
-4. **Run the application:**
+3. **Run the application:**
    ```bash
    npm run dev
    # o
