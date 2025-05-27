@@ -10,9 +10,6 @@ const options = {
     },
     servers: [
       {
-        url: "http://localhost:3000/api",
-      },
-      {
         url: "https://apistudents-1pof.onrender.com/api",
       },
     ],
