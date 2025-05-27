@@ -14,7 +14,9 @@
     "express": "^4.18.2",
     "mysql2": "^3.6.0",
     "sequelize": "^6.32.1",
-    "student-management-api": "file:"
+    "student-management-api": "file:",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
